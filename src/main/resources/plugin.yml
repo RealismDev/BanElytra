@@ -1,0 +1,9 @@
+name: BanElytra
+version: ${project.version}
+main: me.realism.banelytra.Main
+api-version: 1.17
+authors: [ Realism ]
+description: Bans gliding with an elytra.
+
+commands:
+  banelytra:

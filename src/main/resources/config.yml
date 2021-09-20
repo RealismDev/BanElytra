@@ -1,0 +1,8 @@
+reload:
+  message: "&2Started BanElytra!" # Startup message
+
+world:
+  # Set if players can use the elytra in these dimensions. Default: false
+  world: false # Overworld
+  world_nether: false # Nether
+  world_the_end: false # End
