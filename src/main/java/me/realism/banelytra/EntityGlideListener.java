@@ -26,18 +26,22 @@ public class EntityGlideListener implements Listener {
 
         if (e.getEntity().getType().equals(EntityType.PLAYER)) {
 
-            FileConfiguration cfg = main.getConfig();
+            FileConfiguration config = main.getConfig();
 
             Player player = (Player) e.getEntity();
 
             World world = player.getWorld();
             String worldName = world.getName();
 
-            if (cfg.getBoolean("world." + worldName)) {
+            if (config.getBoolean("world." + worldName)) {
                 // Players are allowed to use the elytra in this dimension
                 return;
             }
 
+            if (Utils.IsExempt(player, config))
+                return;
+
+            // Player wasn't exempt and was not in an allowed dimension.
             e.setCancelled(true);
 
             PlayerInventory inventory = player.getInventory();
@@ -59,4 +63,5 @@ public class EntityGlideListener implements Listener {
             player.updateInventory();
         }
     }
+
 }

@@ -9,7 +9,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         this.saveDefaultConfig();
         new EntityGlideListener(this);
-        this.getCommand("banelytra").setExecutor(new ReloadCommand(this));
+        this.getCommand("banelytra").setExecutor(new BanElytraCommand(this));
         Bukkit.getLogger().info(this.getConfig().getString("reload.message"));
     }
 

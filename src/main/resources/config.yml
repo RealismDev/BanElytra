@@ -1,8 +1,27 @@
+# reload.message - Startup and reload message
+
+# Should players be allowed to use elytra in these dimensions?
+# world.world - overworld
+# world.world_nether - nether
+# world.world_the_end - end
+
+# exempt.exempt-ops - should operators be exempt?
+# exempt.exempt-players - define certain exceptions
+
+# CHANGING THE COMMENTS WONT DO ANYTHING YOU NEED TO CHANGE THINGS BELOW THIS LINE. USE '/banelytra reload' TO RELOAD THE CONFIG!
+
 reload:
-  message: "&2Started BanElytra!" # Startup message
+  message: "&2Started BanElytra!"
 
 world:
-  # Set if players can use the elytra in these dimensions. Default: false
-  world: false # Overworld
-  world_nether: false # Nether
-  world_the_end: false # End
+  world: false
+  world_nether: false
+  world_the_end: false
+
+exempt:
+  exempt-ops: true
+
+  exempt-players:
+    - "player1"
+    - "player2"
+    - "player3"
