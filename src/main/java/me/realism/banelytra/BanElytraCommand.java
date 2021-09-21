@@ -117,7 +117,7 @@ public class BanElytraCommand implements CommandExecutor {
 
     public void helpCommand(CommandSender sender) {
         if (sender.hasPermission("banelytra.help")) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Ban elytra help.\n&9/banelytra reload - &6Reloads the config.yml file.\n&9/banelytra exempt <player> - &6Exempts a player from the plugin."));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Ban elytra help.\n&9/banelytra reload - &6Reloads the config.yml file.\n&9/banelytra exempt <add|remove> <player> - &6Exempts a player from the plugin."));
         }
     }
 }
